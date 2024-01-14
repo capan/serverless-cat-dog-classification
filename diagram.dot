@@ -1,0 +1,259 @@
+digraph "Diagram" {
+  splines = "ortho";
+  pad = "1.0";
+  nodesep = "0.60";
+  ranksep = "0.75";
+  fontname = "Sans-Serif";
+  fontsize = "15";
+  dpi = "200";
+  rankdir = "BT";
+  compound = "true";
+  fontcolor = "#222222";
+  edge [
+    color = "#D5871488",
+    penwidth = 2,
+    arrowhead = "dot",
+    arrowtail = "dot",
+  ];
+  node [
+    shape = "box",
+    style = "rounded",
+    fixedsize = true,
+    width = 1.7,
+    height = 1.7,
+    labelloc = "c",
+    imagescale = true,
+    fontname = "Sans-Serif",
+    fontsize = 8,
+    margin = 8,
+  ];
+  subgraph "FileUploadStack" {
+    subgraph "cluster-SubGraph.FileUploadStack" {
+      graph [
+        label = "FileUploadStack",
+        labelloc = "b",
+        labeljust = "l",
+        margin = "10",
+        fontsize = "16",
+        penwidth = "2",
+        pencolor = "#888888",
+        style = "filled,rounded",
+        fillcolor = "#e4e4e4",
+      ];
+      "FileUploadStack/CommonUploadBucket" [
+        label = " CommonUploadBucket",
+        fontsize = 12,
+        image = "/Users/huseyincapan/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Storage/64/Arch_Amazon-S3-Standard_64@5x.png",
+        imagescale = "true",
+        imagepos = "tc",
+        penwidth = "0",
+        shape = "node",
+        fixedsize = "true",
+        labelloc = "b",
+        width = 2,
+        height = 2.266,
+      ];
+      "FileUploadStack/DogBucket" [
+        label = " DogBucket",
+        fontsize = 12,
+        image = "/Users/huseyincapan/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Storage/64/Arch_Amazon-S3-Standard_64@5x.png",
+        imagescale = "true",
+        imagepos = "tc",
+        penwidth = "0",
+        shape = "node",
+        fixedsize = "true",
+        labelloc = "b",
+        width = 2,
+        height = 2.266,
+      ];
+      "FileUploadStack/CatBucket" [
+        label = " CatBucket",
+        fontsize = 12,
+        image = "/Users/huseyincapan/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Storage/64/Arch_Amazon-S3-Standard_64@5x.png",
+        imagescale = "true",
+        imagepos = "tc",
+        penwidth = "0",
+        shape = "node",
+        fixedsize = "true",
+        labelloc = "b",
+        width = 2,
+        height = 2.266,
+      ];
+      "FileUploadStack/FileMetadataTable" [
+        label = " FileMetadataTable",
+        fontsize = 12,
+        image = "/Users/huseyincapan/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Database/64/Arch_Amazon-DynamoDB_64@5x.png",
+        imagescale = "true",
+        imagepos = "tc",
+        penwidth = "0",
+        shape = "node",
+        fixedsize = "true",
+        labelloc = "b",
+        width = 1.2,
+        height = 1.466,
+      ];
+      "FileUploadStack/FileQueue" [
+        label = " FileQueue",
+        fontsize = 12,
+        image = "/Users/huseyincapan/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_App-Integration/Arch_64/Arch_AWS-Simple-Queue-Service_64@5x.png",
+        imagescale = "true",
+        imagepos = "tc",
+        penwidth = "0",
+        shape = "node",
+        fixedsize = "true",
+        labelloc = "b",
+        width = 2,
+        height = 2.266,
+      ];
+      "FileUploadStack/SaveMetadataFunction" [
+        label = " SaveMetadataFunction",
+        fontsize = 12,
+        image = "/Users/huseyincapan/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+        imagescale = "true",
+        imagepos = "tc",
+        penwidth = "0",
+        shape = "node",
+        fixedsize = "true",
+        labelloc = "b",
+        width = 2,
+        height = 2.266,
+      ];
+      "FileUploadStack/Classifier" [
+        label = " Classifier",
+        fontsize = 12,
+        image = "/Users/huseyincapan/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+        imagescale = "true",
+        imagepos = "tc",
+        penwidth = "0",
+        shape = "node",
+        fixedsize = "true",
+        labelloc = "b",
+        width = 2,
+        height = 2.266,
+      ];
+      "FileUploadStack/AddToQueueFunction" [
+        label = " AddToQueueFunction",
+        fontsize = 12,
+        image = "/Users/huseyincapan/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+        imagescale = "true",
+        imagepos = "tc",
+        penwidth = "0",
+        shape = "node",
+        fixedsize = "true",
+        labelloc = "b",
+        width = 2,
+        height = 2.266,
+      ];
+      "FileUploadStack/UpdateClassifiedImageStatusFunction" [
+        label = "\nUpdateClassifiedImage",
+        fontsize = 12,
+        image = "/Users/huseyincapan/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+        imagescale = "true",
+        imagepos = "tc",
+        penwidth = "0",
+        shape = "node",
+        fixedsize = "true",
+        labelloc = "b",
+        width = 2,
+        height = 2.4819999999999998,
+      ];
+      "FileUploadStack/MoveAndDeleteImageFunction" [
+        label = "\nMoveAndDeleteImageFun",
+        fontsize = 12,
+        image = "/Users/huseyincapan/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+        imagescale = "true",
+        imagepos = "tc",
+        penwidth = "0",
+        shape = "node",
+        fixedsize = "true",
+        labelloc = "b",
+        width = 2,
+        height = 2.4819999999999998,
+      ];
+      "FileUploadStack/FileProcessingStateMachine" [
+        label = "\nFileProcessingStateMa",
+        fontsize = 12,
+        image = "/Users/huseyincapan/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_App-Integration/Arch_64/Arch_AWS-Step-Functions_64@5x.png",
+        imagescale = "true",
+        imagepos = "tc",
+        penwidth = "0",
+        shape = "node",
+        fixedsize = "true",
+        labelloc = "b",
+        width = 1.2,
+        height = 1.682,
+      ];
+      "FileUploadStack/TriggerFunction" [
+        label = " TriggerFunction",
+        fontsize = 12,
+        image = "/Users/huseyincapan/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+        imagescale = "true",
+        imagepos = "tc",
+        penwidth = "0",
+        shape = "node",
+        fixedsize = "true",
+        labelloc = "b",
+        width = 2,
+        height = 2.266,
+      ];
+      "FileUploadStack/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role" [
+        label = " Role",
+        fontsize = 12,
+        image = "/Users/huseyincapan/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+        imagescale = "true",
+        imagepos = "tc",
+        penwidth = "0",
+        shape = "node",
+        fixedsize = "true",
+        labelloc = "b",
+        width = 1.2,
+        height = 1.466,
+      ];
+    }
+  }
+  "FileUploadStack/CommonUploadBucket" -> "FileUploadStack/TriggerFunction" [
+    dir = "both",
+  ];
+  "FileUploadStack/SaveMetadataFunction" -> "FileUploadStack/CommonUploadBucket" [
+    dir = "both",
+  ];
+  "FileUploadStack/SaveMetadataFunction" -> "FileUploadStack/FileMetadataTable" [
+    dir = "both",
+  ];
+  "FileUploadStack/Classifier" -> "FileUploadStack/CommonUploadBucket" [
+    dir = "both",
+  ];
+  "FileUploadStack/AddToQueueFunction" -> "FileUploadStack/FileMetadataTable" [
+    dir = "both",
+  ];
+  "FileUploadStack/AddToQueueFunction" -> "FileUploadStack/FileQueue" [
+    dir = "both",
+  ];
+  "FileUploadStack/UpdateClassifiedImageStatusFunction" -> "FileUploadStack/FileMetadataTable" [
+    dir = "both",
+  ];
+  "FileUploadStack/MoveAndDeleteImageFunction" -> "FileUploadStack/CommonUploadBucket" [
+    dir = "both",
+  ];
+  "FileUploadStack/MoveAndDeleteImageFunction" -> "FileUploadStack/DogBucket" [
+    dir = "both",
+  ];
+  "FileUploadStack/MoveAndDeleteImageFunction" -> "FileUploadStack/CatBucket" [
+    dir = "both",
+  ];
+  "FileUploadStack/FileProcessingStateMachine" -> "FileUploadStack/SaveMetadataFunction" [
+    dir = "both",
+  ];
+  "FileUploadStack/FileProcessingStateMachine" -> "FileUploadStack/Classifier" [
+    dir = "both",
+  ];
+  "FileUploadStack/FileProcessingStateMachine" -> "FileUploadStack/UpdateClassifiedImageStatusFunction" [
+    dir = "both",
+  ];
+  "FileUploadStack/FileProcessingStateMachine" -> "FileUploadStack/MoveAndDeleteImageFunction" [
+    dir = "both",
+  ];
+  "FileUploadStack/TriggerFunction" -> "FileUploadStack/FileProcessingStateMachine" [
+    dir = "both",
+  ];
+}

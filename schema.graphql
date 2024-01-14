@@ -1,0 +1,34 @@
+schema {
+  query: Query
+  mutation: Mutation
+  subscription: Subscription
+}
+
+type Query {
+  getStatus(id: ID!): Status
+  listStatuses: [Status]
+}
+
+type Status {
+  id: ID
+  status: String
+  classification_result: String
+  name: String
+  uploaded_at: String
+  image: String
+}
+
+type Mutation {
+  updateStatus(
+    id: ID
+    status: String
+    classification_result: String
+    name: String
+    uploaded_at: String
+    image: String
+  ): Status
+}
+
+type Subscription {
+  onUpdateStatus: Status @aws_subscribe(mutations: ["updateStatus"])
+}
